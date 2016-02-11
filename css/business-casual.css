@@ -218,3 +218,14 @@ footer p {
     float:left;
     padding: 3px;
 }
+.copyright {
+        display: inherit;
+        margin: 0;
+        text-align: center;
+        text-shadow: 1px 1px 2px rgba(0, 0, 0, 0);
+        text-transform: uppercase;
+        font-size: 1.25em;
+        font-weight: 400;
+        letter-spacing: 3px;
+        color: #E2E2E2;
+}
