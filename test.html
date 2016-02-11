@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html><head>
+    <title>Demo for Asual jQuery Address</title>
+    <!--<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.4.2/jquery.min.js"></script>-->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!--<script src="http://code.jquery.com/jquery-1.9.0.js"></script>-->
+    <!--<script src="http://code.jquery.com/jquery-migrate-1.3.0.js"></script>-->
+    <script type="text/javascript" src="js/jquery.address-1.5.js?strict=0"></script>
+    <script type="text/javascript">
+        // Simple log
+        var log = function(msg)
+        {
+            if (!$('.log').length)
+            {
+                $('<div class="log" />').appendTo('.page');
+            }
+            $('.log').append(msg.replace(/^([^:]*):(.*)$/, '<p><b>$1:</b> <span class="$1">$2</span></p>'))
+                    .attr({ scrollTop: $('.log').attr('scrollHeight') })
+                    .find('p:nth-child(even)').addClass('even');
+        }
+
+        // Init and change handlers
+        $.address.init(function(e)
+        {
+            log("init: '" + $.address.value() + "'");
+        }).internalChange(function(e)
+        {
+            log("internalChange: '" + e.value + "'");
+        }).externalChange(function(e)
+        {
+            log("externalChange: '" + e.value + "'");
+            var i = parseInt(e.value, 10);
+            if (isNaN(i))
+                i = g_iStart;
+            if (i < 1)
+                i = 1;
+            if (i > 20)
+                i = 20;
+            switchTo(i);
+        });
+
+        var g_iStart = -1;
+        $(function () {
+            g_iStart = $("#number").text() * 1;
+
+            $("#lnk_prev").click(function(e)
+            {
+                e.preventDefault();
+                var i = $("#number").text() * 1 - 1;
+                if (i <= 0)
+                    return;
+                switchTo(i);
+                $.address.value(i);
+            });
+
+            $("#lnk_next").click(function(e)
+            {
+                e.preventDefault();
+                var i = $("#number").text() * 1 + 1;
+                if (i > 20)
+                    return;
+                switchTo(i);
+                $.address.value(i);
+            });
+        });
+
+        function switchTo(i)
+        {
+            if ($("#number").text() == i)
+                return;
+            $("#number").text(i);
+            $.address.title(i);
+            if (i > 1)
+                $("#lnk_prev").attr("href", "#" + (i - 1)).removeClass("disabled");
+            else
+                $("#lnk_prev").removeAttr("href").addClass("disabled");
+            if (i < 20)
+                $("#lnk_next").attr("href", "#" + (i + 1)).removeClass("disabled");
+            else
+                $("#lnk_next").removeAttr("href").addClass("disabled");
+            $('#number')
+                    .stop() // animation
+                    .css("backgroundColor", "#F4A83D")
+                    .animate({"backgroundColor": "#FFFFFF"}, 1500);
+        }
+    </script>
+</head>
+<body>
+<div class="page">
+    <div class="content">
+        <h1>Demo for Asual jQuery Address</h1>
+        <a id="lnk_prev" href="#10" title="Previous">?</a>
+        <span id="number">11</span>
+        <a id="lnk_next" href="#12" title="Next">?</a>
+        <p>
+            <a href="http://chuchuva.com/pavel/2010/04/using-asual-jquery-address-plugin-for-photo-gallery/">About this demo</a>
+        </p>
+    </div>
+    <div class="log"><p><b>init:</b> <span class="init"> ''</span></p><p class="even"><b>externalChange:</b> <span class="externalChange"> ''</span></p></div></div>
+
+
+</body></html>
