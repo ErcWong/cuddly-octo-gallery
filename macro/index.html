@@ -21,8 +21,9 @@
 
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/business-casual.css">
-    <link rel="stylesheet" href="../css/justifiedGallery.min.css">
-    <link rel="stylesheet" href="../css/colorbox.css">
+    <link rel="stylesheet" href="../plugins/jquery.justifiedgallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="../plugins/colorbox/colorbox.css">
+    <link rel="stylesheet" href="../plugins/prettyPhoto/prettyphoto.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
@@ -38,6 +39,7 @@
             <div class="navbar-header">
                 <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
                     <span class="sr-only">Toggle navigation</span>
+                    <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
                     <span class="icon-bar"></span>
@@ -57,6 +59,9 @@
                     <li>
                         <a href="../life">LIFE</a>
                     </li>
+                    <li>
+                        <a href="../contact">CONTACT</a>
+                    </li>
                 </ul>
             </div>
             <!-- /.navbar-collapse -->
@@ -66,37 +71,21 @@
 
     <div class="container">
         <div id="gallery">
-            <a href="img/IMG1746.png" rel="address:/img/IMG1746">
+            <a href="img/IMG1746.png" rel="lightbox[gallery]">
                 <img src="img/IMG1746.png">
             </a>
-            <a href="img/IMG3403.png"  rel="address:/img/IMG3403.png">
+            <a href="img/IMG3403.png"  rel="lightbox[gallery]">
                 <img src="img/IMG3403.png">
             </a>
-            <a href="img/IMG5645.png"  rel="address:/img/IMG5645.png">
+            <a href="img/IMG5645.png"  rel="lightbox[gallery]">
                 <img src="img/IMG5645.png">
             </a>
-            <a href="img/IMG6385.png">
+            <a href="img/IMG6385.png" rel="lightbox[gallery]">
                 <img src="img/IMG6385.png">
             </a>
-            <a href="img/IMG1746.png" rel="address:/img/IMG1746">
-                <img src="img/IMG1746.png">
-            </a>
-            <a href="img/IMG3403.png">
-                <img src="img/IMG3403.png">
-            </a>
-            <a href="img/IMG5645.png">
-                <img src="img/IMG5645.png">
-            </a>
-            <a href="img/IMG6385.png">
-                <img src="img/IMG6385.png">
-            </a>
-
         </div>
     </div>
     <!-- /.container -->
-    <a href="test1.html" rel="address:/test1">Test 1</a>
-    <a href="test2.html" rel="address:/test2">Test 2</a>
-    <div id="area"></div>
     <footer>
             <div class="col-lg-12 text-center">
                 <p class="copyright">Copyright &copy; eric wong 2016</p>
@@ -105,50 +94,18 @@
 </div>
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
-<script src="../js/jquery.justifiedGallery.min.js"></script>
-<script src="../js/jquery.colorbox.js"></script>
-<script src="../js/jquery.address-1.5.js?strict=0"></script>
+<script src="../plugins/jquery.justifiedgallery/jquery.justifiedGallery.min.js"></script>
+<script src="../plugins/prettyPhoto/prettyphoto.js"></script>
 <script>
     $(document).ready(function (){
         $("#gallery").justifiedGallery({
             rowHeight: 250,
             maxRowHeight: "100%",
             margins: 10,
-            randomize: false,
-            rel: 'gallery1'
-        }).on('jg.complete', function () {
-            $(this).find('a').colorbox({
-                maxWidth : '100%',
-                maxHeight : '100%',
-                opacity : 0.8,
-                transition : 'elastic',
-                current : ''
-            });
+            randomize: false
         });
 
-//        $.colorbox({width:"100%", height:"100%", inline:true, href:"#gallery"});
-
-//        console.log(location.hash);
-//        $("#area").load(location.hash.slice(2) + ".html");
-
-            function loadURL(url) {
-                console.log("loadURL: " + url);
-//                $("#area").load(url);
-            }
-
-
-            // Event handlers
-            $.address.init(function(event) {
-                console.log("init: " + $('[rel*="address:' + event.value + '"]').attr('href'));
-            }).change(function(event) {
-                $(document).on("load", "#area", $('[rel*="address:' + event.value + '"]').attr('href'));
-                console.log("change");
-            });
-
-            $('#gallery a').click(function(){
-                loadURL($(this).attr('href'));
-            });
-
+        $("[rel^='lightbox']").prettyPhoto();
     })
 </script>
 <script>

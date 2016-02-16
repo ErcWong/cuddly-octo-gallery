@@ -28,3 +28,11 @@
 //    $("#number").text(i);
 //    $.address.title(i);
 //}
+
+//function loadHeaderAndFooter(page) {
+//    var path = (page=='Home' ? '':'../');
+//    $('header').load(path + 'header.html', function() {
+//        $('li:contains(' + page + ')').first().addClass('active');
+//    });
+//    $('footer').load(path + 'footer.html');
+//}

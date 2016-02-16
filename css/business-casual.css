@@ -191,6 +191,7 @@ footer p {
 }
 
 .brand > a {
+    text-decoration:none;
     color: #000000;
 }
 
@@ -216,7 +217,7 @@ footer p {
 .frontpage {
     margin: 0 auto;
     float:left;
-    padding: 3px;
+    /*padding: 3px;*/
 }
 .copyright {
         display: inherit;
