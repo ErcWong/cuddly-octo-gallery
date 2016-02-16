@@ -213,11 +213,11 @@ footer p {
     height: 100%;
     overflow: hidden;
     float: left;
+    padding: 0 3px;
 }
 .frontpage {
     margin: 0 auto;
     float:left;
-    /*padding: 3px;*/
 }
 .copyright {
         display: inherit;
