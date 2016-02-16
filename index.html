@@ -97,7 +97,7 @@
     </div>
     <div class="frontpage-crop col-xs-3">
         <div class="hovereffect">
-            <div id="instafeed" style="max-height: 500px"></div>
+            <div id="instafeed" style="height: 500px"></div>
             <!--<img class="frontpage" src="images/IMG0237.png">-->
             <a href="contact">
                 <div class="overlay">
@@ -127,7 +127,8 @@
         clientId: '86a64b6f747741efa9044421d55fafd1',
         accessToken: '2948802822.86a64b6.59c362a80d4f437883321bfb6e5a4658',
         resolution: 'standard_resolution',
-        template: '<img src="{{image}}" class="frontpage" style="max-height: 500px;"/></a>'
+        limit: 1,
+        template: '<img src="{{image}}" class="frontpage" style="height: 100%; width: auto; margin-left: -25%"/></a>'
     });
     feed.run();
 </script>
