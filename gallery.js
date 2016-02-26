@@ -4,9 +4,7 @@
     })
 
     .controller('galleryController', ['$scope','$log', '$http', function($scope, $log, $http) {
-        $scope.macro =[{
-
-                        }];
+        $scope.macro =[];
         $http.get('../macro.json')
             .success(function(data) {
                 $scope.macro=data;
@@ -28,19 +26,19 @@
         };
     })
 
-    .directive('justifiedGallery', function() {
+    .directive('justifiedGallery', ['$timeout',function($timeout) {
         return {
             restrict: 'AE',
             templateUrl: '../image-gallery.html',
             link: function($scope, $elem, $attrs) {
                 $scope.$on('event:repeat-done', function() {
-                    setTimeout(function() {
+                    $timeout(function() {
                         $($elem[0]).justifiedGallery({
                             rowHeight: 225,
-//                            maxRowHeight: "100%",
+                            lastRow : 'justify',
                             margins: 10,
                             randomize: false
-                        });
+                        },0);
                     });
                 });
             },
@@ -48,5 +46,5 @@
                 gallery: '='
             },
         };
-    })
+    }])
 })();
