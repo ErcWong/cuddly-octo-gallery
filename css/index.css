@@ -9,13 +9,13 @@
 }
 
 .hovereffect-video {
-    width: 50%;
+    width: initial;
     overflow: visible !important;
-    user-select: none;
-            -moz-user-select: none;
-            -khtml-user-select: none;
-            -webkit-user-select: none;
-            -o-user-select: none;
+    padding: 0;
+    -moz-user-select: none;
+    -khtml-user-select: none;
+    -webkit-user-select: none;
+    -o-user-select: none;
 }
 
 .hovereffect .overlay {
