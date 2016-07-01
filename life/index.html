@@ -88,40 +88,25 @@
     <!--</div>-->
 
     <div id="gallery">
-        <div class="hovereffect">
-            <img src="img/IMG3107.png">
+        <!--<div class="hovereffect">-->
+            <!--<img src="img/IMG3107.png">-->
 
-            <div class="overlay">
-                <h2>Hong Kong</h2>
-                <a href="img/IMG3107.png"></a>
-            </div>
-        </div>
-        <a href="img/IMG3031.png" rel="lightbox[gallery]">
-            <img src="img/IMG3031.png">
+            <!--<div class="overlay">-->
+                <!--<h2>Hong Kong</h2>-->
+                <!--<a href="img/IMG3107.png"></a>-->
+            <!--</div>-->
+        <!--</div>-->
+        <a>
+            <img src="img/IMG0703.jpg" height="200">
         </a>
-        <a href="img/IMG2692.png" rel="lightbox[gallery]">
-            <img src="img/IMG2692.png">
+        <a>
+            <img src="img/IMG1709.jpg" height="200">
         </a>
-        <a href="img/IMG2016.png" rel="lightbox[gallery]">
-            <img src="img/IMG2016.png">
+        <a>
+            <img src="img/071B7548.jpg" height="200">
         </a>
-        <a href="img/IMG1009.png" rel="lightbox[gallery]">
-            <img src="img/IMG1009.png">
-        </a>
-        <a href="img/IMG4362.png" rel="lightbox[gallery]">
-            <img src="img/IMG4362.png">
-        </a>
-        <a href="img/IMG6148.png" rel="lightbox[gallery]">
-            <img src="img/IMG6148.png">
-        </a>
-        <a href="img/IMG2027.png" rel="lightbox[gallery]">
-            <img src="img/IMG2027.png">
-        </a>
-        <a href="img/IMG0622.png" rel="lightbox[gallery]">
-            <img src="img/IMG0622.png">
-        </a>
-        <a href="img/IMG3262.png" rel="lightbox[gallery]">
-            <img src="img/IMG3262.png">
+        <a>
+            <img src="img/IMG8331.jpg" height="200">
         </a>
     </div>
     <!-- /.gallery -->
@@ -142,6 +127,19 @@
         crossorigin="anonymous"></script>
 <script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
 <script>
+    $(document).ready(function (){
+        $("#gallery").justifiedGallery({
+            rowHeight: 200,
+            margins: 10,
+            randomize: false
+        });
+//        console.log(window.location);
+//        if(window.location.pathname.indexOf('#IMG313') != -1) {
+//            $("button[data-id='macro']").modal('show');
+//        };
+    }).on('jg.complete', function () {
+        $('#gallery a').swipebox();
+    });
 </script>
 <script>
     (function (i, s, o, g, r, a, m) {

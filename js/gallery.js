@@ -36,6 +36,7 @@
                 $scope.$on('event:repeat-done', function() {
                     setTimeout(function() {
                         $($elem[0]).justifiedGallery({
+                            height: 150,
                             fixedHeight: false,
                             lastRow: 'justify',
                             margins: 10,
