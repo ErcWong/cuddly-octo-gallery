@@ -25,6 +25,8 @@
     <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
 
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/clappr/latest/clappr.min.js"></script>
+
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/angular.css">
     <link rel="stylesheet" href="../css/business-casual.css">
@@ -85,51 +87,79 @@
     <!--</a>-->
     <!--</div>-->
 
-    <div class="container-fluid gallery" style="margin: 0 auto;">
+    <div class="container-fluid gallery" style="padding: 0; margin: 0 auto;">
 
-            <div class="col-xs-12 col-sm-6 hovereffect hovereffect-video" style="overflow:hidden;">
-                <video id="vid_01" class="video-js" controls preload="auto" width="495" height="278"
-                       poster="" data-setup="{}">
-                    <source src="../video/QuarryRock.mp4" type='video/m4v'>
-                    <source src="../video/QuarryRock.webm" type='video/webm'>
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a web browser that
-                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                    </p>
-                </video>
+        <div class="col-xs-12 col-sm-6" style="padding: 0">
+            <div class="hovereffect hovereffect-video" style="overflow:hidden">
+                <!--<video id="vid_01" class="video-js" controls preload="auto" width="495" height="278"-->
+                <!--poster="" data-setup="{}">-->
+                <!--<source src="../video/QuarryRock.mp4" type='video/m4v'>-->
+                <!--<source src="../video/QuarryRock.webm" type='video/webm'>-->
+                <!--<p class="vjs-no-js">-->
+                <!--To view this video please enable JavaScript, and consider upgrading to a web browser that-->
+                <!--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>-->
+                <!--</p>-->
+                <!--</video>-->
+                <div id="player_01" style="width:100%"></div>
                 <div class="overlay">
                     <p class="description"> Exploring Quarry Rock.</p>
                 </div>
             </div>
+        </div>
 
-            <div class="col-xs-12 col-sm-6 hovereffect hovereffect-video">
-                <video id="vid_02" class="video-js" controls preload="auto" width="495" height="278"
-                       poster="" data-setup="{}">
-                    <source src="../video/Cork&Fin2.m4v" type='video/m4v'>
-                    <source src="../video/Cork&Fin2.webm" type='video/webm'>
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a web browser that
-                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                    </p>
-                </video>
+        <div class="col-xs-12 col-sm-6" style="padding: 0">
+            <div class="hovereffect hovereffect-video" style="overflow:hidden">
+                <!--<video id="vid_02" class="video-js" controls preload="auto" width="495" height="278"-->
+                <!--poster="" data-setup="{}">-->
+                <!--<source src="../video/Cork&Fin2.m4v" type='video/m4v'>-->
+                <!--<source src="../video/Cork&Fin2.webm" type='video/webm'>-->
+                <!--<p class="vjs-no-js">-->
+                <!--To view this video please enable JavaScript, and consider upgrading to a web browser that-->
+                <!--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>-->
+                <!--</p>-->
+                <!--</video>-->
+                <div id="player_02"></div>
                 <div class="overlay">
                     <p class="description"> Dine out Vancouver at the Cork and Fin.</p>
                 </div>
             </div>
-            <div class="col-xs-12 col-sm-6 hovereffect hovereffect-video">
-                <video id="vid_03" class="video-js" controls preload="auto" width="495" height="278"
-                       poster="" data-setup="{}">
-                    <source src="../video/2016-01-25.m4v" type='video/m4v'>
-                    <source src="../video/2016-01-25.webm" type='video/webm'>
-                    <p class="vjs-no-js">
-                        To view this video please enable JavaScript, and consider upgrading to a web browser that
-                        <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
-                    </p>
-                </video>
+        </div>
+
+        <div class="col-xs-12 col-sm-6" style="padding: 0">
+            <div class="hovereffect hovereffect-video" style="overflow:hidden">
+                <!--<video id="vid_03" class="video-js" controls preload="auto" width="495" height="278"-->
+                       <!--poster="" data-setup="{}">-->
+                    <!--<source src="../video/2016-01-25.m4v" type='video/m4v'>-->
+                    <!--<source src="../video/2016-01-25.webm" type='video/webm'>-->
+                    <!--<p class="vjs-no-js">-->
+                        <!--To view this video please enable JavaScript, and consider upgrading to a web browser that-->
+                        <!--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>-->
+                    <!--</p>-->
+                <!--</video>-->
+                <div id="player_03"></div>
                 <div class="overlay">
                     <p class="description">Tubing</p>
                 </div>
             </div>
+        </div>
+
+        <div class="col-xs-12 col-sm-6" style="padding: 0">
+            <div class="hovereffect hovereffect-video" style="overflow:hidden">
+                <!--<video id="vid_03" class="video-js" controls preload="auto" width="495" height="278"-->
+                <!--poster="" data-setup="{}">-->
+                <!--<source src="../video/2016-01-25.m4v" type='video/m4v'>-->
+                <!--<source src="../video/2016-01-25.webm" type='video/webm'>-->
+                <!--<p class="vjs-no-js">-->
+                <!--To view this video please enable JavaScript, and consider upgrading to a web browser that-->
+                <!--<a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>-->
+                <!--</p>-->
+                <!--</video>-->
+                <div id="player_04"></div>
+                <div class="overlay">
+                    <p class="description">Tubing</p>
+                </div>
+            </div>
+        </div>
 
     </div>
     <!-- /.gallery -->
@@ -150,15 +180,46 @@
         crossorigin="anonymous"></script>
 <script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
 <script>
-  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
-  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
-  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
-  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+    var player_01 = new Clappr.Player({
+        source: "../video/QuarryRock.mp4",
+        parentId: "#player_01",
+        width: "450",
+        height: "253"
+    });
+    var player_02 = new Clappr.Player({
+        source: "../video/Cork&Fin2.mp4",
+        parentId: "#player_02",
+        width: "450",
+        height: "253"
+    });
+    var player_03 = new Clappr.Player({
+        source: "../video/2016-01-25.mp4",
+        parentId: "#player_03",
+        width: "450",
+        height: "253"
+    });
+    var player_04 = new Clappr.Player({
+        source: "../video/2016-01-25.mp4",
+        parentId: "#player_04",
+        width: "450",
+        height: "253"
+    });
+</script>
+<script>
+    (function (i, s, o, g, r, a, m) {
+        i['GoogleAnalyticsObject'] = r;
+        i[r] = i[r] || function () {
+                    (i[r].q = i[r].q || []).push(arguments)
+                }, i[r].l = 1 * new Date();
+        a = s.createElement(o),
+                m = s.getElementsByTagName(o)[0];
+        a.async = 1;
+        a.src = g;
+        m.parentNode.insertBefore(a, m)
+    })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
 
-  ga('create', 'UA-73641920-1', 'auto');
-  ga('send', 'pageview');
-
-
+    ga('create', 'UA-73641920-1', 'auto');
+    ga('send', 'pageview');
 
 
 </script>
