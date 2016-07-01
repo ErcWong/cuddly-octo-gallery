@@ -1,38 +1,49 @@
-//$(function ()
-//{
-//    $.address.strict(false);
-//    $.address.externalChange(function(e)
-//    {
-//        switchTo(e.value);
-//    });
-//
-//    $("#lnk_prev").click(function(e)
-//    {
-//        e.preventDefault();
-//        var i = $("#number").text() * 1 - 1;
-//        switchTo(i);
-//        $.address.value(i);
-//    });
-//
-//    $("#lnk_next").click(function(e)
-//    {
-//        e.preventDefault();
-//        var i = $("#number").text() * 1 + 1;
-//        switchTo(i);
-//        $.address.value(i);
-//    });
-//});
-//
-//function switchTo(i)
-//{
-//    $("#number").text(i);
-//    $.address.title(i);
-//}
+(function() {
+    angular.module('gallery', [])
+    .factory('ImageInfo', function($q, $http) {
+    })
 
-//function loadHeaderAndFooter(page) {
-//    var path = (page=='Home' ? '':'../');
-//    $('header').load(path + 'header.html', function() {
-//        $('li:contains(' + page + ')').first().addClass('active');
-//    });
-//    $('footer').load(path + 'footer.html');
-//}
+    .controller('macroGalleryController', ['$scope','$log', '$http', function($scope, $log, $http) {
+        $scope.images =[{
+
+                        }];
+        $http.get('../macro.json')
+            .success(function(data) {
+                $scope.images=data;
+            })
+            .error(function(data,status,error,config){
+                $scope.contents = [{heading:"Error",description:"Could not load json   data"}];
+            });
+    }])
+
+    // Extension of built-in ngRepeat directive - broadcasts to its parent when it is finished.
+    // Passes the last element rendered as an event parameter.
+    .directive('ngRepeat', function() {
+        return {
+            restrict: 'A',
+            link: function($scope, $elem, $attrs) {
+                if ($scope.$last)
+                    $scope.$parent.$broadcast('event:repeat-done', $elem);
+            }
+        };
+    })
+
+    .directive('justifiedGallery', function() {
+        return {
+            restrict: 'AE',
+            templateUrl: '../image-gallery.html',
+            link: function($scope, $elem, $attrs) {
+                $scope.$on('event:repeat-done', function() {
+                    setTimeout(function() {
+                        $($elem[0]).justifiedGallery({
+                            fixedHeight: false,
+                            lastRow: 'justify',
+                            margins: 10,
+                            randomize: false
+                        });
+                    });
+                });
+            },
+        };
+    })
+})();

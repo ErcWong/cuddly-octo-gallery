@@ -1,3 +1,13 @@
-<a ng-repeat="img in gallery" ng-href="{{img.first_image}}" rel="lightbox[gallery]">
+<div ng-repeat="img in images"  class="hovereffect">
     <img ng-src="{{img.first_image}}">
+    <div class="overlay">
+<a ng-href="{{img.first_image}}" rel="lightbox[gallery]">
+    <!--<img ng-src="{{img.first_image}}">-->
 </a>
+        </div>
+</div>
+
+<!-- old format -->
+<!--<a ng-repeat="img in images" ng-href="{{img.first_image}}" rel="lightbox[gallery]">-->
+    <!--<img ng-src="{{img.first_image}}">-->
+<!--</a>-->

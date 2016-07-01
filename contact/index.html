@@ -21,6 +21,7 @@
 
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/business-casual.css">
+    <link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
@@ -57,7 +58,7 @@
                         <a href="../life">LIFE</a>
                     </li>
                     <li class="active">
-                        <a href=".">CONTACT</a>
+                        <a href=".">IG</a>
                     </li>
                 </ul>
             </div>
@@ -66,11 +67,8 @@
         <!-- /.container -->
     </nav>
 
-    <div class="container">
-        <div class="gallery">
-            <p class="copyright">Coming Soon!</p>
-            <div id="instafeed" style="height: 500px"></div>
-        </div>
+    <div class="gallery">
+            <div id="instafeed" class="container" style=" padding: 0 0 0 15px ; margin: 0 0 0 -15px"></div>
     </div>
     <!-- /.container -->
 
@@ -85,6 +83,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../vendor/instafeed/instafeed.js"></script>
+<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
 <script>
     var feed = new Instafeed({
         get: 'user',
@@ -92,7 +91,7 @@
         clientId: '86a64b6f747741efa9044421d55fafd1',
         accessToken: '2948802822.86a64b6.59c362a80d4f437883321bfb6e5a4658',
         resolution: 'standard_resolution',
-        template: '<img src="{{image}}" class="frontpage" style="height: 100%; width: auto;"/></a>'
+        template: '<div class="col-sm-3" style="height: 250px; padding: 4px 2px; overflow:hidden"> <img src="{{image}}" style="width: 100%"/> </div>'
     });
     feed.run();
 </script>
