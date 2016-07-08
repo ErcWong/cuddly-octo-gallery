@@ -11,6 +11,7 @@
 
     <!-- Bootstrap core CSS -->
     <link rel="stylesheet" href="../css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/bootstrap-social.css">
     <link rel="stylesheet" href="../css/font-awesome.min.css">
 
     <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
@@ -21,7 +22,7 @@
 
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/business-casual.css">
-    <link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">
+    <!--<link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">-->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
     <link href='https://fonts.googleapis.com/css?family=Quicksand:400,300,700' rel='stylesheet' type='text/css'>
@@ -49,19 +50,19 @@
             <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                 <ul class="nav navbar-nav">
                     <li>
-                        <a href="../land">LAND</a>
+                        <a href="../land">SCENERY</a>
                     </li>
                     <li>
                         <a href="../macro">MACRO</a>
                     </li>
                     <li>
-                        <a href="../life">LIFE</a>
+                        <a href="../life">PERSONAL</a>
                     </li>
                     <li>
                         <a href="../video">VIDEO</a>
                     </li>
                     <li class="active">
-                        <a href=".">INSTAGRAM</a>
+                        <a href=".">CONTACT</a>
                     </li>
                 </ul>
             </div>
@@ -69,9 +70,21 @@
         </div>
         <!-- /.container -->
     </nav>
-
-    <div class="gallery">
-            <div id="instafeed" class="container" style=" padding: 0 0 0 15px ; margin: 0 0 0 -15px"></div>
+    <div class="container-fluid">
+    <div class="col-sm-6">
+        <a class="btn btn-block btn-social btn-facebook" href="https://www.facebook.com/ewcaptures/">
+            <i class="fa fa-facebook"></i> Send me a message through Facebook!
+        </a>
+        <a class="btn btn-block btn-social btn-instagram" href="https://www.instagram.com/ahmicks.photos/">
+            <i class="fa fa-instagram"></i> Follow me on instagram!
+        </a>
+        <a class="btn btn-block btn-social btn-flickr" href="https://www.flickr.com/ahmicks/">
+            <i class="fa fa-flickr"></i> Check out my other nonsense on Flickr!
+        </a>
+    </div>
+    <div class="col-sm-6 gallery" style="height: 650px; overflow-y: auto">
+            <div id="instafeed" class="" style=" padding: 0 0 0 15px ; margin: 0 0 0 -15px"></div>
+    </div>
     </div>
     <!-- /.container -->
 
@@ -86,7 +99,7 @@
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
 <script src="../js/bootstrap.min.js"></script>
 <script src="../vendor/instafeed/instafeed.js"></script>
-<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<!--<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>-->
 <script>
     var feed = new Instafeed({
         get: 'user',
@@ -94,7 +107,7 @@
         clientId: '86a64b6f747741efa9044421d55fafd1',
         accessToken: '2948802822.86a64b6.59c362a80d4f437883321bfb6e5a4658',
         resolution: 'standard_resolution',
-        template: '<div class="col-sm-3" style="height: 250px; padding: 4px 2px; overflow:hidden"> <img src="{{image}}" style="width: 100%"/> </div>'
+        template: '<div class="col-sm-12" style=" padding: 4px 2px; overflow:hidden"><a href="{{link}}" target="_blank"><img src="{{image}}" style="width: 100%"/> </a></div>'
     });
     feed.run();
 </script>

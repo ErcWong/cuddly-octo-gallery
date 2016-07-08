@@ -29,9 +29,6 @@
     <link rel="stylesheet" href="../css/angular.css">
     <link rel="stylesheet" href="../css/business-casual.css">
     <link rel="stylesheet" href="../vendor/slider-pro/slider-pro.css">
-    <!--<link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">-->
-    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>-->
-    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>-->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
@@ -61,11 +58,6 @@
                 <img class="sp-image" src="img/IMG1709.jpg">
             </div>
         </div>
-        <!--<div class="sp-slides">-->
-            <!--<div class="sp-slide">-->
-                <!--<img class="sp-image" src="img/071B7548.jpg">-->
-            <!--</div>-->
-        <!--</div>-->
         <div class="sp-slides">
             <div class="sp-slide">
                 <img class="sp-image" src="img/IMG0620.jpg">
@@ -91,8 +83,13 @@
                 <img class="sp-image" src="img/IMG9772.jpg">
             </div>
         </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG9334.jpg">
+            </div>
+        </div>
     </div>
-    <footer style="position: fixed; top: 0; background: rgba(0,0,0,0)">
+    <footer style="position: fixed; top: 0; left: 0; background: rgba(0,0,0,0); width: 100%">
         <div class="container">
             <div class="brand"><a href=".." style="text-decoration:none;">E R I C W O N G</a></div>
 
@@ -115,19 +112,19 @@
                 <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
                     <ul class="nav navbar-nav">
                         <li>
-                            <a href="../land" style="background: rgba(0,0,0,0) !important" >LAND</a>
+                            <a class="nav-inactive-2" href="../land">SCENERY</a>
                         </li>
-                        <li>
-                            <a href="../macro"  style="background: rgba(0,0,0,0) !important">MACRO</a>
+                        <li >
+                            <a class="nav-inactive" href="../macro">MACRO</a>
                         </li>
                         <li class="active">
-                            <a href="." style="color: white !important; background: rgba(0,0,0,0.7) !important">LIFE</a>
+                            <a class="nav-active" href=".">PERSONAL</a>
                         </li>
                         <li>
-                            <a href="../video"  style="background: rgba(0,0,0,0) !important">VIDEO</a>
+                            <a class="nav-inactive" href="../video">VIDEO</a>
                         </li>
                         <li>
-                            <a href="../contact"  style="background: rgba(0,0,0,0) !important">INSTAGRAM</a>
+                            <a class="nav-inactive-2" href="../contact">CONTACT</a>
                         </li>
                     </ul>
                 </div>
@@ -136,7 +133,7 @@
             </nav>
         </div>
     </footer>
-    <footer style="position: fixed; bottom:0; background: rgba(0,0,0,0)">
+    <footer style="position: fixed; left: 0; bottom:0; background: rgba(0,0,0,0); width: 100%">
         <div class="container">
             <div class="col-lg-12 text-center">
                 <p class="copyright">Copyright &copy; eric wong 2016</p>
@@ -150,21 +147,28 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
-<!--<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>-->
 <script src="../vendor/slider-pro/jquery.sliderPro.js"></script>
 <script>
     $(document).ready(function () {
-        $('#my-slider').sliderPro({
-            forceSize: "fullWindow",
-            buttons: false,
-            arrows: true,
-//            updateHash: true,
-            slideAnimationDuration: 2500,
-            autoplayDelay: 7500,
-            slideDistance: 0,
-//            shuffle: true
-        });
+        if ($(window).width() < 759) {
+            $('#my-slider').sliderPro({
+                forceSize: "fullWindow",
+                buttons: false,
+                arrows: true,
+                slideAnimationDuration: 1000,
+                autoplayDelay: 5000,
+                slideDistance: 0
+            });
+        } else {
+            $('#my-slider').sliderPro({
+                forceSize: "fullWindow",
+                buttons: false,
+                arrows: true,
+                slideAnimationDuration: 2500,
+                autoplayDelay: 7500,
+                slideDistance: 0
+            });
+        }
     });
 </script>
 <script>

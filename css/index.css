@@ -118,6 +118,28 @@ div#gallery> .hovereffect:hover img, justified-gallery>.hovereffect:hover img {
     }
 }
 
+.navbar-nav > li > a.nav-active {
+    background: rgba(0,0,0,0.7) !important;
+}
+
+.navbar-default .navbar-nav > .active > a.nav-active {
+    color: white !important;
+}
+
+.navbar-nav > li > a.nav-inactive {
+    background: rgba(255,255,255,0.30) !important;
+    padding: 30px !important;
+    margin-top: 5px !important;
+    margin-bottom: 5px !important;
+}
+
+.navbar-nav > li > a.nav-inactive-2 {
+    background: rgba(255,255,255,0.30) !important;
+    padding: 25px !important;
+    margin-top: 10px !important;
+    margin-bottom: 10px !important;
+}
+
 .videocontainer{
     padding: 5px;
 }
