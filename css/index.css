@@ -76,6 +76,7 @@ div#gallery> .hovereffect:hover img, justified-gallery>.hovereffect:hover img {
     text-transform: uppercase;
     text-align: center;
     text-orientation: upright;
+    -webkit-text-orientation: upright;
     writing-mode: vertical-rl;
     position: absolute;
     margin: 0 5px 0;
@@ -114,7 +115,7 @@ div#gallery> .hovereffect:hover img, justified-gallery>.hovereffect:hover img {
 @media (min-width: 768px) {
     .hovereffect h2 {
         writing-mode: horizontal-tb;
-
+        -webkit-writing-mode: horizontal-tb;
     }
 }
 
