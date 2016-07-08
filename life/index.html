@@ -36,12 +36,6 @@
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:200,400' rel='stylesheet' type='text/css'>
 
     <style>
-        .slider-pro {
-            height: 100%;
-            border: 0;
-            overflow: auto;
-            -webkit-overflow-scrolling: touch;
-        }
     </style>
 </head>
 <body>
@@ -51,7 +45,7 @@
 
     <!--</div>-->
     <!-- Navigation -->
-    <div class="slider-pro" id="my-slider">
+    <div class="slider-pro" id="my-slider" style="position: fixed">
         <div class="sp-slides">
             <div class="sp-slide">
                 <img class="sp-image" src="img/IMG0703.jpg">
@@ -156,7 +150,6 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 <script src="../vendor/slider-pro/jquery.sliderPro.js"></script>
-<script src="../vendor/inobounce/inobounce.js"></script>
 <script>
     $(document).ready(function () {
         if ($(window).width() < 759) {
