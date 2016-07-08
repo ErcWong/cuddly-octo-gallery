@@ -28,7 +28,10 @@
     <link rel="stylesheet" href="../css/index.css">
     <link rel="stylesheet" href="../css/angular.css">
     <link rel="stylesheet" href="../css/business-casual.css">
-    <link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="../vendor/slider-pro/slider-pro.css">
+    <!--<link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">-->
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.css"/>-->
+    <!--<link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick-theme.css"/>-->
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
@@ -36,82 +39,104 @@
     <link href='https://fonts.googleapis.com/css?family=Work+Sans:200,400' rel='stylesheet' type='text/css'>
 </head>
 <body>
+
+<!-- /.gallery -->
 <div class="container">
-    <div class="brand"><a href=".." style="text-decoration:none;">E R I C W O N G</a></div>
 
-    <!-- Navigation -->
-    <nav class="navbar navbar-default" role="navigation">
-        <div class="">
-            <!-- Brand and toggle get grouped for better mobile display -->
-            <div class="navbar-header">
-                <button type="button" class="navbar-toggle" data-toggle="collapse"
-                        data-target="#bs-example-navbar-collapse-1">
-                    <span class="sr-only">Toggle navigation</span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                    <span class="icon-bar"></span>
-                </button>
-                <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
-                <a class="navbar-brand" href="..">E R I C W O N G</a>
-            </div>
-            <!-- Collect the nav links, forms, and other content for toggling -->
-            <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                <ul class="nav navbar-nav">
-                    <li>
-                        <a href="../land">LAND</a>
-                    </li>
-                    <li>
-                        <a href="../macro">MACRO</a>
-                    </li>
-                    <li class="active">
-                        <a href=".">LIFE</a>
-                    </li>
-                    <li>
-                        <a href="../video">VIDEO</a>
-                    </li>
-                    <li>
-                        <a href="../contact">INSTAGRAM</a>
-                    </li>
-                </ul>
-            </div>
-            <!-- /.navbar-collapse -->
-        </div>
-        <!-- /.container -->
-    </nav>
-
-    <!--&lt;!&ndash; gallery &ndash;&gt;-->
-    <!--<div class="gallery">-->
-    <!--<a href="img/IMG3092.png" rel="lightbox[gallery]">-->
-    <!--<img src="img/IMG3092.png">-->
-    <!--</a>-->
     <!--</div>-->
-
-    <div id="gallery">
-        <!--<div class="hovereffect">-->
-            <!--<img src="img/IMG3107.png">-->
-
-            <!--<div class="overlay">-->
-                <!--<h2>Hong Kong</h2>-->
-                <!--<a href="img/IMG3107.png"></a>-->
+    <!-- Navigation -->
+    <div class="slider-pro" id="my-slider">
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG0703.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG0626.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG1709.jpg">
+            </div>
+        </div>
+        <!--<div class="sp-slides">-->
+            <!--<div class="sp-slide">-->
+                <!--<img class="sp-image" src="img/071B7548.jpg">-->
             <!--</div>-->
         <!--</div>-->
-        <a>
-            <img src="img/IMG0703.jpg" height="200">
-        </a>
-        <a>
-            <img src="img/IMG1709.jpg" height="200">
-        </a>
-        <a>
-            <img src="img/071B7548.jpg" height="200">
-        </a>
-        <a>
-            <img src="img/IMG8331.jpg" height="200">
-        </a>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG0620.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG0632.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG8331.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG0089.jpg">
+            </div>
+        </div>
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="img/IMG9772.jpg">
+            </div>
+        </div>
     </div>
-    <!-- /.gallery -->
+    <footer style="position: fixed; top: 0; background: rgba(0,0,0,0)">
+        <div class="container">
+            <div class="brand"><a href=".." style="text-decoration:none;">E R I C W O N G</a></div>
 
-    <footer>
+            <nav class="navbar navbar-default" role="navigation" style="background: rgba(0,0,0,0)">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#bs-example-navbar-collapse-1">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+                    <a class="navbar-brand" href="..">E R I C W O N G</a>
+                </div>
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li>
+                            <a href="../land" style="background: rgba(0,0,0,0) !important" >LAND</a>
+                        </li>
+                        <li>
+                            <a href="../macro"  style="background: rgba(0,0,0,0) !important">MACRO</a>
+                        </li>
+                        <li class="active">
+                            <a href="." style="color: white !important; background: rgba(0,0,0,0.7) !important">LIFE</a>
+                        </li>
+                        <li>
+                            <a href="../video"  style="background: rgba(0,0,0,0) !important">VIDEO</a>
+                        </li>
+                        <li>
+                            <a href="../contact"  style="background: rgba(0,0,0,0) !important">INSTAGRAM</a>
+                        </li>
+                    </ul>
+                </div>
+                <!-- /.navbar-collapse -->
+                <!-- /.container -->
+            </nav>
+        </div>
+    </footer>
+    <footer style="position: fixed; bottom:0; background: rgba(0,0,0,0)">
         <div class="container">
             <div class="col-lg-12 text-center">
                 <p class="copyright">Copyright &copy; eric wong 2016</p>
@@ -125,20 +150,21 @@
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
-<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<!--<script type="text/javascript" src="//cdn.jsdelivr.net/jquery.slick/1.6.0/slick.min.js"></script>-->
+<!--<script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>-->
+<script src="../vendor/slider-pro/jquery.sliderPro.js"></script>
 <script>
-    $(document).ready(function (){
-        $("#gallery").justifiedGallery({
-            rowHeight: 200,
-            margins: 10,
-            randomize: false
+    $(document).ready(function () {
+        $('#my-slider').sliderPro({
+            forceSize: "fullWindow",
+            buttons: false,
+            arrows: true,
+//            updateHash: true,
+            slideAnimationDuration: 2500,
+            autoplayDelay: 7500,
+            slideDistance: 0,
+//            shuffle: true
         });
-//        console.log(window.location);
-//        if(window.location.pathname.indexOf('#IMG313') != -1) {
-//            $("button[data-id='macro']").modal('show');
-//        };
-    }).on('jg.complete', function () {
-        $('#gallery a').swipebox();
     });
 </script>
 <script>
