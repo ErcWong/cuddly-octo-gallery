@@ -29,6 +29,7 @@
     <link rel="stylesheet" href="../css/angular.css">
     <link rel="stylesheet" href="../css/business-casual.css">
     <link rel="stylesheet" href="../vendor/jquery.justifiedGallery/justifiedGallery.min.css">
+    <link rel="stylesheet" href="../vendor/slider-pro/slider-pro.css">
     <link href="http://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800"
           rel="stylesheet" type="text/css">
     <link href='https://fonts.googleapis.com/css?family=Josefin+Sans:100,400,700' rel='stylesheet' type='text/css'>
@@ -117,9 +118,80 @@
         </a>
     </div>
     <!-- /.gallery -->
+    <div id="slider-container" class="slider-pro">
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="../vendor/slider-pro/images/blank.gif"
+                     data-src="img/slider022000.jpg"/>
+
+                <div class="sp-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            <div class="sp-slide">
+                <img class="sp-image" src="../vendor/slider-pro/images/blank.gif"
+                     data-src="img/IMG0622.png"/>
+
+                <div class="sp-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+            <div class="sp-slide">
+                <iframe src="slider1.html" style="width:100%;height: 100%"></iframe>
+            </div>
+        </div>
+
+        <div class="sp-thumbnails">
+            <div class="sp-thumbnail">
+                <div class="sp-thumbnail-image-container">
+                    <img class="sp-thumbnail-image" src="img/slider011000.jpg"/>
+                </div>
+                <div class="sp-thumbnail-text">
+                    <div class="sp-thumbnail-title">Lorem ipsum</div>
+                    <div class="sp-thumbnail-description">Dolor sit amet, consectetur adipiscing</div>
+                </div>
+            </div>
+            <div class="sp-thumbnail">
+                <div class="sp-thumbnail-image-container">
+                    <img class="sp-thumbnail-image" src="img/slider012000.jpg"/>
+                </div>
+                <div class="sp-thumbnail-text">
+                    <div class="sp-thumbnail-title">Lorem ipsum</div>
+                    <div class="sp-thumbnail-description">Dolor sit amet, consectetur adipiscing</div>
+                </div>
+            </div>
+            <div class="sp-thumbnail">
+                <div class="sp-thumbnail-image-container">
+                    <img class="sp-thumbnail-image" src="img/slider012000.jpg"/>
+                </div>
+                <div class="sp-thumbnail-text">
+                    <div class="sp-thumbnail-title">Lorem ipsum</div>
+                    <div class="sp-thumbnail-description">Dolor sit amet, consectetur adipiscing</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="slider-container2" class="slider-pro">
+        <div class="sp-slides">
+            <div class="sp-slide">
+                <img class="sp-image" src="../vendor/slider-pro/images/blank.gif"
+                     data-src="img/slider022000.jpg"/>
+
+                <div class="sp-caption">Lorem ipsum dolor sit amet, consectetur adipisicing elit.</div>
+            </div>
+        </div>
+
+        <div class="sp-thumbnails">
+            <div class="sp-thumbnail">
+                <div class="sp-thumbnail-image-container">
+                    <img class="sp-thumbnail-image" src="img/slider021000.jpg"/>
+                </div>
+                <div class="sp-thumbnail-text">
+                    <div class="sp-thumbnail-title">Lorem ipsum</div>
+                    <div class="sp-thumbnail-description">Dolor sit amet, consectetur adipiscing</div>
+                </div>
+            </div>
+        </div>
+    </div>
     <footer>
         <div class="col-lg-12 text-center">
-            <p class="copyright">Copyright &copy; eric wong 2016</p>
+            <p class="copyright">&copy;eric wong 2016</p>
         </div>
     </footer>
     <!-- Small modal -->
@@ -148,6 +220,7 @@
         integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
         crossorigin="anonymous"></script>
 <script src="../vendor/jquery.justifiedGallery/jquery.justifiedGallery.min.js"></script>
+<script src="../vendor/slider-pro/jquery.sliderPro.js"></script>
 <script>
     $(document).ready(function (){
         $("#gallery").justifiedGallery({
@@ -155,11 +228,51 @@
             margins: 10,
             randomize: true
         });
-        console.log(window.location);
-        if(window.location.pathname.indexOf('#IMG313') != -1) {
-            $("button[data-id='macro']").modal('show');
-        };
-
+        <!--console.log(window.location);-->
+        <!--if(window.location.pathname.indexOf('#IMG313') != -1) {-->
+            <!--$("button[data-id='macro']").modal('show');-->
+        <!--};-->
+        $( '#slider-container' ).sliderPro({
+			width: 670,
+			height: 500,
+			orientation: 'vertical',
+			loop: false,
+			arrows: true,
+			buttons: false,
+			thumbnailsPosition: 'right',
+			thumbnailPointer: true,
+			thumbnailWidth: 290,
+			breakpoints: {
+				800: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 270,
+					thumbnailHeight: 100
+				},
+				500: {
+					thumbnailsPosition: 'bottom',
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
+		$( '#slider-container2' ).sliderPro({
+			width: 960,
+			height: 500,
+			arrows: true,
+			buttons: false,
+			waitForLayers: true,
+			thumbnailWidth: 200,
+			thumbnailHeight: 100,
+			thumbnailPointer: true,
+			autoplay: false,
+			autoScaleLayers: false,
+			breakpoints: {
+				500: {
+					thumbnailWidth: 120,
+					thumbnailHeight: 50
+				}
+			}
+		});
     });
 </script>
 <script>
